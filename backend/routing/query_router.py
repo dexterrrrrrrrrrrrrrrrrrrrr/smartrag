@@ -23,9 +23,9 @@ _MULTI_STEP_KEYWORDS = (
 # Weights are intentionally simple and documented so the scoring is
 # auditable — not a black box.
 _WEIGHTS = {
-    "length": 0.25,       # long queries tend to need more reasoning
+    "length": 0.20,       # long queries tend to need more reasoning
     "questions": 0.15,     # multiple questions in one query = more work
-    "comparison": 0.30,    # comparative reasoning is inherently multi-part
+    "comparison": 0.35,    # comparative reasoning is inherently multi-part
     "multi_step": 0.20,    # explicit multi-step / sequential asks
     "chunks": 0.10,        # more retrieved context to synthesize = harder
 }

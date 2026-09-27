@@ -19,5 +19,5 @@ if __name__ == "__main__":
         "backend.api.app:app",
         host=settings.api_host,
         port=settings.api_port,
-        reload=(settings.app_env == "development"),
+        reload=False,
     )

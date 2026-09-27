@@ -13,7 +13,7 @@ def embedder() -> Embedder:
 
 
 def test_embed_returns_correct_dimension(embedder: Embedder):
-    result = embedder.embed("What is Retrieval Augmented Generation?")
+    result = embedder.embed("What is RAG?")
     assert result.dimension == embedder.settings.embedding_dimension
     assert len(result.vector) == result.dimension
 
@@ -27,7 +27,7 @@ def test_embed_batch_matches_single(embedder: Embedder):
 
 
 def test_similar_queries_have_high_similarity(embedder: Embedder):
-    a = embedder.embed("What is Retrieval Augmented Generation?")
+    a = embedder.embed("What is RAG?")
     b = embedder.embed("Can you explain what RAG means?")
     sim = Embedder.cosine_similarity(a.vector, b.vector)
     assert sim > 0.5  # loosely similar in meaning
